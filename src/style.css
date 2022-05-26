@@ -1,5 +1,20 @@
+body {
+  font-family: Roboto, arial, sans-serif;
+}
+.weather-app {
+  max-width: 600px;
+  margin: 30 auto;
+  padding: 30px;
+  border: 1px solid gray;
+  border-radius: 15px;
+}
+
 h1 {
-  color: red;
+  color: rgb(32, 33, 36);
+  font-size: 20px;
+  height: 60px;
+  vertical-align: top;
+  width: 326px;
 }
 
 img {
@@ -7,6 +22,36 @@ img {
   max-height: 100%;
 }
 #currentWeatherEmoji {
-  height: 175px;
-  width: 175px;
+  height: 100px;
+  width: 100px;
+}
+.current-details {
+  color: rgb(112, 117, 122);
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 400;
+  height: 20px;
+  padding-left: 10px;
+  line-height: 20px;
+  list-style: none;
+}
+.current-weather-details {
+  color: rgb(112, 117, 122);
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  height: 20px;
+  line-height: 20px;
+  text-align: right;
+  list-style: none;
+}
+
+#currentTemp {
+  font-size: 45px;
+  font-weight: 400px;
+}
+.temp-type {
+  position: relative;
+  font-size: 16px;
+  top: -23px;
 }

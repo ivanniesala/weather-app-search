@@ -15,40 +15,41 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app"></div>
-      <h1 class="currentCity">New York</h1>
-      <ul>
-        <li id="currentDay">Friday</li>
-        <li>Clear</li>
-      </ul>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <img
-          id="currentWeatherEmoji"
-          src="src/cloudy.jpeg"
-          alt="weather emoji"
-        />
-        12°C | °F
-      </div>
-      <div class="col-md-6">
-        <ul>
-          <li>Precipitation: 0%</li>
-          <li>Humidity:15%</li>
-          <li>Wind: 2mph</li>
+      <div class="weather-app">
+        <h1 class="currentCity">New York</h1>
+        <ul class="current-details">
+          <li id="currentDay">Friday</li>
+          <li id="currentTime">12:00pm</li>
+          <li>Clear</li>
         </ul>
+      <div class="row">
+           <div class="col-md-6">
+          <img
+            id="currentWeatherEmoji"
+            src="src/cloudy.jpeg"
+            alt="weather emoji"
+          />
+          <span id="currentTemp">12</span><span class="temp-type"><small></small><a href="#">°C</a> |<a href="#">°F</a> </small>
+            </span>
+         </div>
+        <div class="col-md-6">
+          <ul class="current-weather-details">
+            <li id="precipitation">Precipitation: 0%</li>
+            <li id="humidity">Humidity:15%</li>
+            <li id="wind">Wind: 2mph</li>
+          </ul>
+        </div>
+      </div> 
+    </div>
+      <div>
+        <small>
+          <a
+            href=" https://github.com/ivanniesala/weatherapp-version1"
+            target="_blank"
+            >Open-source code</a>
+              by Ivannie S.
+        </small>
       </div>
-    </div>
-    </div>
-    <div>
-      <small>
-      <a
-        href=" https://github.com/ivanniesala/weatherapp-version1"
-        target="_blank"
-        >Open-source code</a>
-      by Ivannie S.
-    </small>
-    </div>
     <script src="src/java.js"></script>
   </body>
 </html>

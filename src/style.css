@@ -3,7 +3,7 @@ body {
 }
 .weather-app {
   max-width: 600px;
-  margin: 30 auto;
+  margin: 30px auto;
   padding: 30px;
   border: 1px solid gray;
   border-radius: 15px;
@@ -11,8 +11,8 @@ body {
 
 h1 {
   color: rgb(32, 33, 36);
-  font-size: 20px;
-  height: 60px;
+  font-size: 40px;
+  height: 40px;
   vertical-align: top;
   width: 326px;
 }
@@ -21,7 +21,7 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
-#currentWeatherEmoji {
+#icon {
   height: 100px;
   width: 100px;
 }
@@ -35,7 +35,7 @@ img {
   line-height: 20px;
   list-style: none;
 }
-.current-weather-details {
+.weather-details {
   color: rgb(112, 117, 122);
   display: block;
   font-size: 16px;
@@ -47,11 +47,40 @@ img {
 }
 
 #currentTemp {
-  font-size: 45px;
+  font-size: 70px;
   font-weight: 400px;
+  top: px;
 }
 .temp-type {
   position: relative;
   font-size: 16px;
-  top: -23px;
+  top: -40px;
+}
+#search {
+  background: #f9f7fe;
+  border: none;
+  padding: 15px 20px;
+  display: inline-block;
+  border-radius: 10px;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  height: 45px;
+  line-height: 20px;
+  width: 400px;
+}
+.search-button {
+  background: #885df1;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  height: 45px;
+  line-height: 20px;
+  width: 75px;
+  display: inline-block;
+}
+#codeLink {
+  margin: 0 auto;
+  text-align: center;
 }

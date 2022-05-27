@@ -1,55 +1,55 @@
 body {
-  font-family: Roboto, arial, sans-serif;
+  font-family: "PT Mono", monospace;
+  background-color: #c7f5fe;
 }
 .weather-app {
   max-width: 600px;
   margin: 30px auto;
   padding: 30px;
-  border: 1px solid gray;
+  border: 4px solid #f3f798;
   border-radius: 15px;
+  background-color: #fcc8f8;
+  box-shadow: rgb(136, 93, 241) 0px 2px 45px 1px;
 }
 
 h1 {
-  color: rgb(32, 33, 36);
+  color: #9b45e4;
+  margin: 20px 0px;
   font-size: 40px;
   height: 40px;
   vertical-align: top;
   width: 326px;
 }
 
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
 #icon {
   height: 100px;
   width: 100px;
 }
 .current-details {
-  color: rgb(112, 117, 122);
+  color: #f3f798;
   display: inline-block;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 400;
-  height: 20px;
+  margin: 10px 0px;
   padding-left: 10px;
-  line-height: 20px;
+  line-height: 30px;
   list-style: none;
 }
 .weather-details {
-  color: rgb(112, 117, 122);
+  color: #fc00a3;
   display: block;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   height: 20px;
-  line-height: 20px;
+  line-height: 30px;
   text-align: right;
   list-style: none;
 }
 
 #currentTemp {
-  font-size: 70px;
+  font-size: 65px;
   font-weight: 400px;
-  top: px;
+  color: #fc00a3;
 }
 .temp-type {
   position: relative;
@@ -62,14 +62,17 @@ img {
   padding: 15px 20px;
   display: inline-block;
   border-radius: 10px;
-  color: rgba(39, 33, 66, 0.4);
   font-size: 16px;
   height: 45px;
   line-height: 20px;
   width: 400px;
 }
+#search:hover {
+  border: 2px solid #fc00a3;
+}
 .search-button {
   background: #885df1;
+  color: #f3f798;
   font-weight: 500;
   font-size: 16px;
   padding: 10px;
@@ -80,6 +83,10 @@ img {
   width: 75px;
   display: inline-block;
 }
+.search-button:hover {
+  background: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+}
+
 #codeLink {
   margin: 0 auto;
   text-align: center;

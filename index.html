@@ -36,20 +36,23 @@
                </div>
                 </form>
             </div>
-            <div id="now">
-            <h1 id="currentCity">New York</h1>
-            <ul class="current-details">
-             <li id="currentDay">Friday</li>
-            <li id="currentTime">12:00pm</li>
-             </ul>
+           <h1 id="currentCity">
+             New York
+            </h1>
+            
             <div class="row">
-           <div class="col-md-8">
-            <div class="clearfix weather-temprature">
+              <div class="col-md-3" id="now">
+                    
+                    <ul class="current-details">
+                    <li id="currentDay">Friday</li>
+                    <li id="currentTime">12:00pm</li>
+                    </ul>
+              </div>
+           <div class="col-md-6">
           <img
             id="icon"
-            src="src/cloudy.jpeg"
+            src="src/sunny-rain.png"
             alt="weather emoji"
-            class="float-left"
           />
           <span id="currentTemp">12</span>
           <span class="temp-type">
@@ -57,9 +60,9 @@
               |
               <a href="" id="celsius">°C</a>
            </span> 
-          </div>
-         </div> 
-        <div class="col-md-4">
+           </div>
+        
+        <div class="col-md-3">
           <ul class="weather-details">
             <li id="type">Foggy</li>
             <li id="humidity">Humidity:15%</li>
@@ -67,6 +70,9 @@
           </ul>
           </div>
         </div>
+        <br />
+        <div class="container" id="forecast">
+      
       </div> 
     </div>
       <div id="codeLink">

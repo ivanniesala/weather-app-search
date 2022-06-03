@@ -29,8 +29,8 @@ let months = [
   `March`,
   `Apr`,
   `May`,
-  `Jun`,
-  `Jul`,
+  `June`,
+  `July`,
   `Aug`,
   `Sept`,
   `Oct`,
@@ -39,7 +39,7 @@ let months = [
 ];
 let month = months[now.getMonth()];
 let showDate = document.querySelector("#currentDay");
-showDate.innerHTML = `${day}, ${month} ${date}, ${year}`;
+showDate.innerHTML = ` ${day}, ${month} ${date}, ${year}`;
 
 let nowTime = document.querySelector("#currentTime");
 nowTime.innerHTML = `${hours}:${minutes}`;
@@ -60,15 +60,12 @@ function showNewCity(response) {
   let cityTemp = document.querySelector("#currentTemp");
   let temprature = Math.round(response.data.main.temp);
   cityTemp.innerHTML = `${temprature}`;
-
   fahrenheitTemprature = response.data.main.temp;
-
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-
   let typeOfday = document.querySelector("#type");
   typeOfday.innerHTML = response.data.weather[0].main;
 
@@ -78,7 +75,9 @@ function showNewCity(response) {
 
   let windspeed = document.querySelector("#wind");
   let windNewCity = response.data.wind.speed;
-  windspeed.innerHTML = `Wind:${windNewCity} mph`;
+  windspeed.innerHTML = `Wind: ${windNewCity} mph`;
+
+  displayForecast();
 }
 
 function searchNewCity(city) {
@@ -92,6 +91,9 @@ function newCitySearch(event) {
   searchNewCity(city);
 }
 
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", newCitySearch);
+
 function showCelsisusTemp(event) {
   event.preventDefault();
   let celsiusTemp = ((fahrenheitTemprature - 32) * 5) / 9;
@@ -99,13 +101,10 @@ function showCelsisusTemp(event) {
   tempELement.innerHTML = Math.round(celsiusTemp);
 }
 
-let fahrenheitTemprature = null;
-
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", newCitySearch);
-
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsisusTemp);
+
+let fahrenheitTemprature = null;
 
 function showFahrenheitTemp(event) {
   event.preventDefault();
@@ -115,3 +114,34 @@ function showFahrenheitTemp(event) {
 
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tues", "Wed", "Thurs"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <span class="forecast-date">
+                ${day}
+               </span>
+                <br />
+                <span class="forecast-icon">
+                🌞
+                </span>
+                <div class="forecast-temps">
+                <span class="forecast-temp-max">
+                65°F  
+                </span>
+                <span class="forecast-temp-min">
+                50°F  
+                </span>
+              </div>
+            </div>      
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
